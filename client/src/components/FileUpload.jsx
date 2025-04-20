@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { API_Key, API_Secret } from "../utils/constants";
+import { API_Key, API_Secret } from "../utils/constants.js";
 import { CloudArrowUpIcon, DocumentIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const FileUpload = ({ contract, account, provider }) => {
@@ -30,7 +30,8 @@ const FileUpload = ({ contract, account, provider }) => {
             return prev + 10;
           });
         }, 500);
-
+        console.log(API_Key, API_Secret);
+        
         const resFile = await axios({
           method: "post",
           url: "https://api.pinata.cloud/pinning/pinFileToIPFS",

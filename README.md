@@ -1,10 +1,10 @@
-# Blockchain Drive: Securing Data on the Ethereum & IPFS
+# SecureCloud Drive: Securing Data on the Ethereum & IPFS
 
-Welcome to Blockchain Drive, a decentralized data storage solution that leverages the power of Ethereum and IPFS to securely store and manage your data.
+Welcome to SecureCloud, a decentralized data storage solution that leverages the power of Ethereum and IPFS to securely store and manage your data.
 
 ## Features
 
-- **MetaMask Integration**: Seamlessly connect your MetaMask wallet to the Blockchain Drive application.
+- **MetaMask Integration**: Seamlessly connect your MetaMask wallet to the SecureCloud application.
 
 - **File Upload to IPFS**: Select and upload your files, which are securely stored on IPFS via Pinata.
 

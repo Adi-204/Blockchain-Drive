@@ -40,13 +40,13 @@ const Footer = () => {
                 </svg>
               </div>
               <p className="text-sm font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-200 to-indigo-400">
-                Blockchain Drive
+                SecureCloud Drive
               </p>
             </div>
           </div>
           
           <p className="mt-2 text-center text-xs leading-5 text-gray-500 md:text-left">
-            &copy; {currentYear} Blockchain Drive. All rights reserved. Powered by Ethereum & IPFS.
+            &copy; {currentYear} SecureCloud Drive. All rights reserved. Powered by Ethereum & IPFS.
           </p>
         </div>
         

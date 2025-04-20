@@ -97,7 +97,7 @@ const Navigation = () => {
                       </svg>
                     </div>
                     <span className="text-xl font-bold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-300 hidden sm:block group-hover:bg-gradient-to-r group-hover:from-indigo-300 group-hover:to-white transition-all duration-300">
-                      Blockchain Drive
+                      SecureCloud Drive
                     </span>
                   </Link>
                 </div>
