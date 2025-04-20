@@ -13,6 +13,8 @@ export const contractAbi = abi;
 // ! ||                                   Pinata IPFS                                  ||
 // ! ||--------------------------------------------------------------------------------||
 
-export const API_Key =  import.meta.env.API_Key;
-export const API_Secret=  import.meta.env.API_Secret;
-export const JWT= import.meta.env.JWT;
+export const API_Key =  import.meta.env.VITE_API_KEY;
+export const API_Secret=  import.meta.env.VITE_API_SECRET;
+export const JWT= import.meta.env.VITE_JWT;
+
+console.log(API_Key, API_Secret, JWT);
