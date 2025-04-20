@@ -20,9 +20,9 @@ function classNames(...classes) {
 }
 
 const featuresMenu = [
-  { name: 'Upload Files', href: '/', icon: CloudArrowUpIcon, description: 'Upload files to blockchain storage' },
-  { name: 'View Files', href: '/#files', icon: Squares2X2Icon, description: 'View your uploaded files' },
-  { name: 'Share Files', href: '/share', icon: ArrowUpOnSquareIcon, description: 'Share files with other users' },
+  { name: 'Upload Files', href: '/#upload-files', icon: CloudArrowUpIcon, description: 'Upload files to blockchain storage' },
+  { name: 'View Files', href: '/#view-files', icon: Squares2X2Icon, description: 'View your uploaded files' },
+  { name: 'Share Files', href: '/#share-files', icon: ArrowUpOnSquareIcon, description: 'Share files with other users' },
 ];
 
 const Navigation = () => {
@@ -104,20 +104,6 @@ const Navigation = () => {
 
                 {/* Desktop navigation */}
                 <div className="hidden sm:ml-8 sm:flex sm:items-center space-x-1">
-                  <Link
-                    to="/"
-                    className={classNames(
-                      "text-gray-200 hover:text-white",
-                      "rounded-full px-4 py-2 text-sm font-medium transition-all duration-300",
-                      location.pathname === "/" ? "bg-indigo-500/20 text-white ring-1 ring-indigo-500/30" : "hover:bg-gray-800/60"
-                    )}
-                  >
-                    <span className="flex items-center gap-1.5">
-                      <HomeIcon className="h-4 w-4" />
-                      Home
-                    </span>
-                  </Link>
-
                   {/* Features dropdown */}
                   <Popover 
                     className="relative" 
@@ -182,11 +168,12 @@ const Navigation = () => {
                   </Popover>
 
                   <Link
-                    to="/share"
+                    to="/#share-files"
+                    onClick={() => handleNavigate("/#share-files")}
                     className={classNames(
                       "text-gray-200 hover:text-white",
                       "rounded-full px-4 py-2 text-sm font-medium transition-all duration-300",
-                      location.pathname === "/share" ? "bg-indigo-500/20 text-white ring-1 ring-indigo-500/30" : "hover:bg-gray-800/60"
+                      location.pathname === "/#share-files" ? "bg-indigo-500/20 text-white ring-1 ring-indigo-500/30" : "hover:bg-gray-800/60"
                     )}
                   >
                     <span className="flex items-center gap-1.5">
@@ -195,70 +182,6 @@ const Navigation = () => {
                     </span>
                   </Link>
                 </div>
-              </div>
-
-              {/* User menu */}
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                {/* Profile dropdown */}
-                <Menu as="div" className="relative ml-3">
-                  <div>
-                    <Menu.Button className="relative flex rounded-full bg-gradient-to-r from-indigo-600 to-purple-600 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800 p-1 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/30">
-                      <span className="sr-only">Open user menu</span>
-                      <UserIcon className="h-5 w-5 text-white" aria-hidden="true" />
-                    </Menu.Button>
-                  </div>
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-200"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-150"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
-                  >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-xl bg-gray-900/95 backdrop-blur-xl py-1 shadow-lg ring-1 ring-gray-700/50 focus:outline-none">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active ? 'bg-indigo-500/20' : '',
-                              'block px-4 py-2 text-sm text-white transition-colors duration-150 hover:bg-indigo-500/20'
-                            )}
-                          >
-                            Your Profile
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active ? 'bg-indigo-500/20' : '',
-                              'block px-4 py-2 text-sm text-white transition-colors duration-150 hover:bg-indigo-500/20'
-                            )}
-                          >
-                            Settings
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(
-                              active ? 'bg-indigo-500/20' : '',
-                              'block px-4 py-2 text-sm text-white transition-colors duration-150 hover:bg-indigo-500/20'
-                            )}
-                          >
-                            Sign out
-                          </a>
-                        )}
-                      </Menu.Item>
-                    </Menu.Items>
-                  </Transition>
-                </Menu>
               </div>
             </div>
           </div>
@@ -274,13 +197,7 @@ const Navigation = () => {
             leaveTo="opacity-0 transform -translate-y-4"
           >
             <Disclosure.Panel className="sm:hidden backdrop-blur-xl bg-gray-900/95">
-              <div className="space-y-1 px-3 pb-3 pt-2">
-                <Disclosure.Button as={Link} to="/" className="block w-full text-left rounded-xl px-3 py-2 text-base font-medium text-white hover:bg-indigo-500/20 transition-colors duration-300">
-                  <span className="flex items-center gap-3">
-                    <HomeIcon className="h-5 w-5" /> Home
-                  </span>
-                </Disclosure.Button>
-                
+              <div className="space-y-1 px-3 pb-3 pt-2">        
                 {featuresMenu.map((item) => (
                   <Disclosure.Button
                     key={item.name}

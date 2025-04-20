@@ -42,7 +42,7 @@ const NotFound = () => {
           <p className="text-sm text-gray-400 mt-4">
             or check out the
             <Link
-              to="/#files"
+              to="/#view-files"
               className="ml-1 text-indigo-400 hover:text-indigo-300 transition-colors duration-200"
             >
               file storage

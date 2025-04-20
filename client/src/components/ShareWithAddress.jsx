@@ -173,18 +173,7 @@ const ShareWithAddress = ({ contract, account }) => {
           </div>
           
           {/* Toggleable file selector */}
-          <div>
-            <button
-              type="button"
-              onClick={() => setShowFileSelection(!showFileSelection)}
-              className="text-sm text-indigo-400 hover:text-indigo-300 focus:outline-none transition-colors duration-200 inline-flex items-center"
-            >
-              {showFileSelection ? 'Hide file selection' : 'Select specific files to share'} 
-              <span className="ml-1.5 text-xs">
-                {showFileSelection ? '▲' : '▼'}
-              </span>
-            </button>
-            
+          <div>  
             {showFileSelection && (
               <div className="mt-4 p-4 bg-gray-800/40 rounded-lg border border-gray-700">
                 <SelectFile 

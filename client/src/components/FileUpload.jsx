@@ -4,6 +4,7 @@ import { API_Key, API_Secret } from "../utils/constants.js";
 import { CloudArrowUpIcon, DocumentIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const FileUpload = ({ contract, account, provider }) => {
+  
   const [file, setFile] = useState(null);
   const [fileName, setFileName] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -150,7 +151,7 @@ const FileUpload = ({ contract, account, provider }) => {
               <CloudArrowUpIcon className="h-12 w-12 mx-auto text-gray-400" />
               <div className="flex flex-col items-center text-center">
                 <p className="text-lg font-medium text-white">
-                  Drag and drop your file here
+                  Drag and drop your file here  
                 </p>
                 <p className="text-sm text-gray-400 mt-1">
                   or click to browse from your computer

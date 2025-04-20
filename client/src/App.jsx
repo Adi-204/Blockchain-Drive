@@ -238,7 +238,7 @@ function App() {
                 <div className="w-full border-t border-gray-800"></div>
               </div>
               <div className="relative flex justify-center">
-                <span className="bg-gray-900 px-4 text-2xl font-semibold text-indigo-400">Why Choose SecureCloud Storage</span>
+                <span className="text-3xl font-bold text-white">Why Choose SecureCloud Storage</span>
               </div>
               
               <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
@@ -278,7 +278,7 @@ function App() {
             
             {/* File upload section */}
             {isConnected && (
-              <div className="mt-20 flow-root sm:mt-24 backdrop-blur-sm bg-gray-900/40 rounded-3xl p-8 shadow-xl ring-1 ring-gray-800">
+              <div id="upload-files" className="mt-20 flow-root sm:mt-24 backdrop-blur-sm bg-gray-900/40 rounded-3xl p-8 shadow-xl ring-1 ring-gray-800">
                 <div className="relative">
                   {/* Decorative elements */}
                   <div className="absolute -inset-x-2 -top-2 bottom-0">
@@ -318,11 +318,11 @@ function App() {
           <div className="w-full border-t border-gray-800"></div>
         </div>
         <div className="relative flex justify-center">
-          <span className="bg-gray-900 px-4 text-2xl font-semibold text-indigo-400">Your Cloud Storage</span>
+          <span className="text-3xl font-bold text-white">Your Cloud Storage</span>
         </div>
       </div>
       
-      <div id="files" className="mx-auto max-w-7xl px-6 lg:px-8 py-12 md:py-16 scroll-mt-24">
+      <div id="view-files" className="mx-auto max-w-7xl px-6 lg:px-8 py-12 md:py-16 scroll-mt-24">
         <div className="flex items-center justify-between mb-8">
           <h2 className="text-2xl font-bold tracking-tight text-white">My Files</h2>
           {isConnected && (
@@ -380,7 +380,7 @@ function App() {
       </div>
       
       {/* Share with specific wallet addresses section */}
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 py-12 md:py-16">
+      <div id="share-files" className="mx-auto max-w-7xl px-6 lg:px-8 py-12 md:py-16">
         <h2 className="text-2xl font-bold tracking-tight text-white mb-8">Share with Specific Addresses</h2>
         <div className="backdrop-blur-sm bg-gray-900/40 rounded-3xl p-6 shadow-xl ring-1 ring-gray-800 overflow-hidden relative">
           <div className="relative z-10">
